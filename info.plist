@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>re.mntw.mutemic</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>A0CDB3B2-F0E7-4BDF-AEE0-266AECDF2021</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>4DA0A766-5535-4DE3-B90B-186030C45CB7</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Andrii Yurchuk</string>
+	<key>description</key>
+	<string>Mute/unmute microphone with a keyboard shortcut</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>mutemic</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string>set inputVolume to input volume of (get volume settings)
+
+if inputVolume = 0 then
+    set inputVolume to 100
+    set displayNotification to "Unmuted"
+else
+    set inputVolume to 0
+    set displayNotification to "Muted"
+end if
+
+set volume input volume inputVolume
+
+display notification displayNotification
+delay 1</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>4DA0A766-5535-4DE3-B90B-186030C45CB7</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>29</integer>
+				<key>hotmod</key>
+				<integer>1179648</integer>
+				<key>hotstring</key>
+				<string>0</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>A0CDB3B2-F0E7-4BDF-AEE0-266AECDF2021</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Mute/unmute the microphone with a keyboard shortcut (Cmd+Shift+0)</string>
+	<key>uidata</key>
+	<dict>
+		<key>4DA0A766-5535-4DE3-B90B-186030C45CB7</key>
+		<dict>
+			<key>xpos</key>
+			<integer>495</integer>
+			<key>ypos</key>
+			<integer>190</integer>
+		</dict>
+		<key>A0CDB3B2-F0E7-4BDF-AEE0-266AECDF2021</key>
+		<dict>
+			<key>xpos</key>
+			<integer>200</integer>
+			<key>ypos</key>
+			<integer>190</integer>
+		</dict>
+	</dict>
+	<key>variablesdontexport</key>
+	<array/>
+	<key>version</key>
+	<string>0.0.1</string>
+	<key>webaddress</key>
+	<string>https://github.com/Ch00k/alfred-mutemic</string>
+</dict>
+</plist>
