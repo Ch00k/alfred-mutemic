@@ -43,7 +43,7 @@
 				<string>set inputVolume to input volume of (get volume settings)
 
 if inputVolume = 0 then
-    set inputVolume to 100
+    set inputVolume to 75
     set displayNotification to "Unmuted"
 else
     set inputVolume to 0
